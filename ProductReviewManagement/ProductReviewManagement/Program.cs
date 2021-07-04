@@ -62,7 +62,8 @@ namespace ProductReviewManagement
             management.RetrieveCountOfRecords(productReviewList);
             Console.WriteLine("UC5- Retrieving review by Product ID:");
             management.RetrieveProductIDAndReview(productReviewList);
-
+            Console.WriteLine("UC6- Skipping top 5 records:");
+            management.SkipTopFiveRecords(productReviewList);
             Console.ReadLine();
 
         }

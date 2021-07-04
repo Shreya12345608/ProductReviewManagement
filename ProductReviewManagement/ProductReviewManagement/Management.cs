@@ -62,10 +62,26 @@ namespace ProductReviewManagement
             {
                 //Output
                 Console.WriteLine("ID:" + list.ProductID + "=====>" + list.Review);
-               
+
+            }
+        }
+        /// <summary>
+        /// Skips elements up to a specified position starting from the first element in a sequence.
+        /// </summary>
+        /// <param name="listProductReview"></param>
+        public void SkipTopFiveRecords(List<ProductReview> listProductReview)
+        {
+
+            var recordedData = (from productReviews in listProductReview
+                                select productReviews).Skip(5);
+            Console.WriteLine("Retrieving records after skipping top 5 records- ");
+            foreach (var list in recordedData)
+            {
+                Console.WriteLine("ProductID:- " + list.ProductID + " " + "UserID:- " + list.UserID
+                    + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
+
             }
         }
     }
 }
-
 
