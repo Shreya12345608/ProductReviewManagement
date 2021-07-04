@@ -52,7 +52,11 @@ namespace ProductReviewManagement
                     + " " + "Rating:- " + list.Rating + " " + "Review:- " + list.Review + " " + "isLike:- " + list.isLike);
                 Console.WriteLine("-----------------------------------------------------------------");
             }
+            Console.WriteLine("UC2- Retrieving Top 3 records based on rating: ");
+            Management management = new Management();
+            management.TopRecords(productReviewList);
             Console.ReadLine();
+
         }
     }
 }
