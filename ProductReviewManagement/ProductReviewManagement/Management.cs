@@ -55,7 +55,7 @@ namespace ProductReviewManagement
         }
         public void RetrieveProductIDAndReview(List<ProductReview> listProductReview)
         {
-            // method parameter(s) => method body, or method parameter(s) => method return value.
+           d
             var recordedData = listProductReview.Select(x => new { ProductID = x.ProductID, Review = x.Review });
             Console.WriteLine("ID with Review");
             foreach (var list in recordedData)
@@ -82,6 +82,15 @@ namespace ProductReviewManagement
 
             }
         }
+        public void SelectProductIDAndReviews(List<ProductReview> listProductReview)
+        {
+            // method parameter(s) => method body, or method parameter(s) => method return value.
+            var recordedData = listProductReview.Select(x => new { x.ProductID, x.Review });
+            foreach (var list in recordedData)
+            {
+                //OP
+                Console.WriteLine("ID:" + list.ProductID + "=====>" + list.Review);
+            }
+        }
     }
 }
-
