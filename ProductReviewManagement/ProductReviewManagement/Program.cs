@@ -58,6 +58,8 @@ namespace ProductReviewManagement
             Console.WriteLine("\n");
             Console.WriteLine("UC3- Retrieving records with specific conditions: ");
             management.SelectedRecords(productReviewList);
+            Console.WriteLine("UC4- Count: ");
+            management.RetrieveCountOfRecords(productReviewList);
             Console.ReadLine();
 
         }
