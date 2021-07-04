@@ -60,6 +60,9 @@ namespace ProductReviewManagement
             management.SelectedRecords(productReviewList);
             Console.WriteLine("UC4- Count: ");
             management.RetrieveCountOfRecords(productReviewList);
+            Console.WriteLine("UC5- Retrieving review by Product ID:");
+            management.RetrieveProductIDAndReview(productReviewList);
+
             Console.ReadLine();
 
         }
