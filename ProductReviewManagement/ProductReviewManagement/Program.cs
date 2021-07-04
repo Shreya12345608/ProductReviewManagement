@@ -66,6 +66,9 @@ namespace ProductReviewManagement
             management.SkipTopFiveRecords(productReviewList);
             Console.WriteLine("UC7- Retrieving review by Product ID:");
             management.SelectProductIDAndReviews(productReviewList);
+            Console.WriteLine("UC7- Create DataTable .");
+            DataTableOperations dataTableOperations = new DataTableOperations();
+            dataTableOperations.CreateDataTable();
             Console.ReadLine();
 
         }
